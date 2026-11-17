@@ -1,0 +1,15 @@
+{
+  "name": "Driveway Culvert Pipe Sizing Calculator \u2014 HDPE Dual-Wall & Cover Depth",
+  "short_name": "Culvert Calc",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#121006",
+  "theme_color": "#eab308",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

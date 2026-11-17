@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Driveway Culvert Pipe Sizing Calculator — HDPE Dual-Wall & Cover Depth — Accurate Material Estimator</title>
+  <meta name="description" content="Calculate exact corrugated dual-wall HDPE driveway culvert pipe length, diameter (12" to 24"), gravel cover depth for H-20 load, and backfill tons.">
+  <link rel="canonical" href="https://sebiglesias.com.ar/culvert-pipe-calculator/">
+  <meta name="theme-color" content="#eab308">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Driveway Culvert Pipe Sizing Calculator — HDPE Dual-Wall & Cover Depth">
+  <meta property="og:description" content="Calculate exact corrugated dual-wall HDPE driveway culvert pipe length, diameter (12" to 24"), gravel cover depth for H-20 load, and backfill tons.">
+  <meta property="og:url" content="https://sebiglesias.com.ar/culvert-pipe-calculator/">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2BNDBQP0W7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2BNDBQP0W7');
+  </script>
+
+  <!-- Google AdSense -->
+  <meta name="google-adsense-account" content="ca-pub-3381238987477190">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3381238987477190" crossorigin="anonymous"></script>
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Driveway Culvert Pipe Sizing Calculator \u2014 HDPE Dual-Wall & Cover Depth",
+    "url": "https://sebiglesias.com.ar/culvert-pipe-calculator/",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "description": "Calculate exact corrugated dual-wall HDPE driveway culvert pipe length, diameter (12\" to 24\"), gravel cover depth for H-20 load, and backfill tons.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the minimum cover depth required over a driveway culvert pipe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To withstand heavy delivery trucks and fire engines (AASHTO H-20 loading of 32,000 lbs per axle), flexible corrugated plastic HDPE pipe requires at least **12 inches of compacted crushed gravel cover** above the crown of the pipe. If pipe cover is less than 12 inches, heavy axles will crush or deform the pipe."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is dual-wall smooth interior HDPE pipe superior to corrugated metal pipe (CMP)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Standard corrugated metal galvanized pipes rust out and rot along the invert (waterline) within 15 to 20 years. Modern dual-wall HDPE pipe (like ADS N-12) has a smooth interior wall that increases water flow velocity by 40% while having an expected service life exceeding 75+ years with zero corrosion."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you calculate culvert length for a driveway?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A culvert must be longer than the actual driveway width! Because ditch banks slope outward at a 2:1 angle to prevent erosion, add twice the ditch depth on each end. For a 16-foot driveway over a 28-inch deep ditch, you need at least a 24-foot culvert pipe."
+        }
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge">🚜 Rural Road & DOT Drainage Standards</div>
+      <h1>Driveway Culvert Pipe & Cover Depth Calculator</h1>
+      <p class="subtitle">Calculate corrugated HDPE culvert pipe length, diameter (12" to 24"), gravel cover depth for H-20 highway truck traffic.</p>
+    </header>
+
+    <!-- AdSense Top Banner -->
+    <div style="text-align:center; margin: 16px 0;">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-3381238987477190"
+           data-ad-slot="auto"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="calc-grid">
+      <!-- Inputs Card -->
+      <form class="card" id="culvert-pipe-calculator-form" onsubmit="event.preventDefault();">
+        <h2>📐 Driveway Width & Ditch Depth</h2>
+        
+        <div class="input-row">
+          <div class="form-group">
+            <label for="drivewayWid">Driveway Crossing Width</label>
+            <div class="input-wrap">
+              <input type="number" id="drivewayWid" step="2" min="10" value="16" required>
+              <span class="input-suffix">ft</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="ditchDepth">Ditch Total Depth</label>
+            <div class="input-wrap">
+              <input type="number" id="ditchDepth" step="2" min="14" max="60" value="28" required>
+              <span class="input-suffix">inches</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="form-group">
+            <label for="pipeDia">Culvert Diameter</label>
+            <select id="pipeDia">
+              <option value="12">12-Inch (Small Swale / Low Water Flow)</option>
+              <option value="15" selected>15-Inch (Standard Residential County Spec)</option>
+              <option value="18">18-Inch (Moderate Stormwater Creek)</option>
+              <option value="24">24-Inch (Heavy Rural Creek Drainage)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="endTreatment">End Bank Slope</label>
+            <select id="endTreatment">
+              <option value="2.0" selected>2:1 Side Slope Bank (Standard Dirt Flaring)</option>
+              <option value="1.5">1.5:1 Steep Slope Bank</option>
+              <option value="headwall">Concrete / Block Headwalls (Shortest Pipe)</option>
+            </select>
+          </div>
+        </div>
+
+      </form>
+
+      <!-- Results Card -->
+      <div class="card">
+        <h2>🎯 Culvert Specifications & Backfill</h2>
+        
+        <div class="result-hero">
+          <div class="result-label">Recommended Culvert Pipe Length</div>
+          <div class="result-number" id="pipeLength">24 ft</div>
+          <div class="result-label" style="color:#ffffff;">Standard 24-Foot Corrugated HDPE Stick</div>
+          <div style="font-size:0.95rem; color:#fde047; margin-top:6px;" id="coverSummary">Gravel Cover Above Pipe: 13.0 Inches (H-20 Safe)</div>
+        </div>
+
+        <div class="sub-hero-grid">
+          <div class="sub-hero-col">
+            <div class="sub-hero-label">Crushed Gravel Backfill</div>
+            <div class="sub-hero-val" id="backfillTons">14.5 Tons</div>
+            <div class="sub-hero-sub">#21A or #57 Stone</div>
+          </div>
+          <div class="sub-hero-col">
+            <div class="sub-hero-label">Peak Flow Capacity</div>
+            <div class="sub-hero-val" id="flowCfs">≈ 5.8 CFS</div>
+            <div class="sub-hero-sub">Cubic Feet per Second</div>
+          </div>
+        </div>
+
+        <div class="specs-grid">
+          <div class="spec-item">
+            <div class="spec-desc">Highway Load Rating</div>
+            <div class="spec-val" style="color:#4ade80;">H-20 Rated (32,000 lbs/Axle)</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-desc">Flared End Aprons</div>
+            <div class="spec-val">2× Metal / HDPE Aprons</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-desc">Stabilization Geotextile</div>
+            <div class="spec-val">Woven Driveway Fabric</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-desc">Slope Gradient</div>
+            <div class="spec-val">1% to 2% Pitch</div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Amazon Supplies Box -->
+    <section class="supplies-card">
+      <h3>🛠️ Recommended Tools, Hardware & Building Supplies</h3>
+      <div class="supplies-grid">
+        <div class="supply-item">
+          <div>
+            <div class="supply-title">Heavy-Duty Woven Driveway Geotextile Fabric (12.5ft x 60ft)</div>
+            <div class="supply-desc">High-tensile woven road fabric distributes heavy truck loads over culvert pipe backfill.</div>
+          </div>
+          <a href="https://www.amazon.com/s?k=driveway+geotextile+fabric+woven&tag=sebiglesias-20" target="_blank" rel="nofollow noopener" class="btn-amazon">Check on Amazon →</a>
+        </div>
+        <div class="supply-item">
+          <div>
+            <div class="supply-title">12-Inch Corrugated Dual-Wall Smooth Interior HDPE Culvert Pipe</div>
+            <div class="supply-desc">AASHTO M294 compliant smooth interior drain pipe delivers maximum hydraulic flow without clogging.</div>
+          </div>
+          <a href="https://www.amazon.com/s?k=corrugated+hdpe+drainage+pipe+12+inch&tag=sebiglesias-20" target="_blank" rel="nofollow noopener" class="btn-amazon">Check on Amazon →</a>
+        </div>
+        <div class="supply-item">
+          <div>
+            <div class="supply-title">Surveying Marking Whiskers and 60d Steel Timber Spikes</div>
+            <div class="supply-desc">High visibility ground marking whiskers for setting invert depths and culvert alignment pins.</div>
+          </div>
+          <a href="https://www.amazon.com/s?k=surveying+marking+whiskers+spikes&tag=sebiglesias-20" target="_blank" rel="nofollow noopener" class="btn-amazon">Check on Amazon →</a>
+        </div>
+        <div class="supply-item">
+          <div>
+            <div class="supply-title">Empire 48-Inch Magnetic Aluminum Heavy Duty Box Level</div>
+            <div class="supply-desc">Shock-resistant precision box level verifies a uniform 1% downward ditch slope.</div>
+          </div>
+          <a href="https://www.amazon.com/s?k=empire+48+inch+box+level+magnetic&tag=sebiglesias-20" target="_blank" rel="nofollow noopener" class="btn-amazon">Check on Amazon →</a>
+        </div>
+      </div>
+      <p style="font-size:0.75rem; color:#94a3b8; margin-top:14px; margin-bottom:0; text-align:center;">
+        ⚖️ <em>Affiliate Notice: As an Amazon Associate, this site earns from qualifying purchases at no additional cost to you. We strictly link to trade-grade construction tools, hardware, and safety materials.</em>
+      </p>
+    </section>
+
+    <!-- FAQ Section for SEO -->
+    <section class="faq-section">
+      <h2 style="font-size:1.35rem; color:#ffffff; margin-bottom:16px;">Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-q">What is the minimum cover depth required over a driveway culvert pipe?</div>
+        <div class="faq-a">To withstand heavy delivery trucks and fire engines (AASHTO H-20 loading of 32,000 lbs per axle), flexible corrugated plastic HDPE pipe requires at least **12 inches of compacted crushed gravel cover** above the crown of the pipe. If pipe cover is less than 12 inches, heavy axles will crush or deform the pipe.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Why is dual-wall smooth interior HDPE pipe superior to corrugated metal pipe (CMP)?</div>
+        <div class="faq-a">Standard corrugated metal galvanized pipes rust out and rot along the invert (waterline) within 15 to 20 years. Modern dual-wall HDPE pipe (like ADS N-12) has a smooth interior wall that increases water flow velocity by 40% while having an expected service life exceeding 75+ years with zero corrosion.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How do you calculate culvert length for a driveway?</div>
+        <div class="faq-a">A culvert must be longer than the actual driveway width! Because ditch banks slope outward at a 2:1 angle to prevent erosion, add twice the ditch depth on each end. For a 16-foot driveway over a 28-inch deep ditch, you need at least a 24-foot culvert pipe.</div>
+      </div>
+    </section>
+
+    <!-- Bottom AdSense Banner -->
+    <div style="text-align:center; margin: 32px 0;">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-3381238987477190"
+           data-ad-slot="auto"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+      <p>© 2026 <a href="https://sebiglesias.com.ar/">sebiglesias.com.ar</a> · Driveway Culvert Pipe Sizing Calculator — HDPE Dual-Wall & Cover Depth. Educational and trade reference tool.</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
